@@ -41,6 +41,9 @@ for entry in user_prompt:
         in_the_bible.append(entry)
 
 percent_in_bible = round(bible_prompt / len(user_prompt), 2) * 100
-print("Your post is " + str(percent_in_bible) + "% in the bible")
-print("your entries from the bible were:")
-print(in_the_bible)
+if (percent_in_bible == 0):
+    print("None Of These Words Are In The Bible")
+else:
+    print("Your post is " + str(percent_in_bible) + "% in the bible")
+    print("your entries from the bible were:")
+    print(in_the_bible)
